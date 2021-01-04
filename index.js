@@ -21,7 +21,7 @@ const stocks = require('./src/model/stock');
 // Add stock
 exports.addStock = (newstock) => {
     stocks.create(newstock)
-        .then((newstock) => {
+        .then(() => {
             console.info('Stock Added');
         })
         .catch((err) => {
@@ -43,9 +43,10 @@ exports.findStock = (stockName) => {
 };
 
 // Update stock
-exports.updateStock = (_id, stockName) => {
-    stocks.findByIdAndUpdate({_id, stockName})
-        .then(stockName => {
+exports.updateStock = (_id, newStock) => {
+    // Parameter added to avoid warning.
+    stocks.findByIdAndUpdate(_id, newStock, {useFindAndModify: false})
+        .then(() => {
             console.info('Stock successfully updated.!');
         })
         .catch((err) => {
