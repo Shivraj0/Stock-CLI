@@ -57,7 +57,8 @@ exports.updateStock = (_id, newStock) => {
 
 // Remove stock
 exports.removeStock = (_id) => {
-    stocks.findByIdAndRemove({_id})
+    // Parameter added to avoid warning.
+    stocks.findByIdAndRemove(_id, {useFindAndModify: false})
         .then(() => {
             console.info('Stock successfully removed.!');
         })
