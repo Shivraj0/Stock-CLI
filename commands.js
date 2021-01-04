@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const program = require('commander');
 const { prompt } = require('inquirer');
 
@@ -42,7 +44,7 @@ program
     .alias('a')
     .description('Buy a stock')
     .action(() => {
-        prompt(requests)
+        prompt(query)
             .then(response => addStock(response))
             .catch((err) => {
                 console.info('Some error occured while adding through CLI.');
