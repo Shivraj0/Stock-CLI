@@ -1,0 +1,25 @@
+{
+  "name": "stock-cli",
+  "version": "1.0.0",
+  "description": "Stock App CLI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shivraj0/Stock-CLI.git"
+  },
+  "author": "Shivraj Koli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shivraj0/Stock-CLI/issues"
+  },
+  "homepage": "https://github.com/Shivraj0/Stock-CLI#readme",
+  "dependencies": {
+    "commander": "^6.2.1",
+    "inquirer": "^7.3.3",
+    "mongoose": "^5.11.9"
+  }
+}
